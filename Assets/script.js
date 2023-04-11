@@ -1,6 +1,6 @@
 const apiKey = 'b6cf6bed156d9678a930200c0d7872ad';
 
-// Function to fetch weather data for a given city
+//  fetch weather data for a given city
 async function getWeatherData(city) {
   const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   const response = await fetch(apiURL);
@@ -8,7 +8,7 @@ async function getWeatherData(city) {
   return data;
 }
 
-// Function to fetch forecasted weather data for a given city
+//  fetch forecasted weather data for a given city
 async function getForecastData(city) {
   const apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
   const response = await fetch(apiURL);
@@ -16,7 +16,7 @@ async function getForecastData(city) {
   return data;
 }
 
-// Function to display current weather data for a given city
+//  display current weather data for a given city
 function displayCurrentWeather(city, data) {
   const cityName = data.name;
   const date = new Date(data.dt * 1000).toLocaleDateString();
@@ -25,8 +25,7 @@ function displayCurrentWeather(city, data) {
   const humidity = data.main.humidity;
   const windSpeed = data.wind.speed;
 
-  // Code to display the current weather data on the dashboard
-  // ...
+
 }
 
 // Function to display forecasted weather data for a given city
@@ -39,8 +38,7 @@ function displayForecast(city, data) {
     return daysDiff >= 1 && daysDiff <= 5;
   });
 
-  // Code to display the forecast data on the dashboard
-  // ...
+
 }
 
 // Function to handle a city search
@@ -48,15 +46,14 @@ async function handleCitySearch(city) {
   const currentData = await getWeatherData(city);
   const forecastData = await getForecastData(city);
 
-  // Code to display the current and forecasted weather data for the given city on the dashboard
+  //  display the current and forecasted weather data for the given city on the dashboard
   displayCurrentWeather(city, currentData);
   displayForecast(city, forecastData);
 
-  // Code to add the searched city to the search history on the dashboard
-  // ...
+
 }
 
-// Event listener for the city search form
+// add Event listener for the city search form
 const searchForm = document.querySelector('#city-search-form');
 searchForm.addEventListener('submit', (event) => {
   event.preventDefault();
