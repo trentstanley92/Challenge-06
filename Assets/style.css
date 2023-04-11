@@ -1,0 +1,100 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2 {
+    margin: 20px 0;
+  }
+  
+  #city-search-form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  
+  #current-weather, #forecast {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #current-weather > div, #forecast > div {
+    flex-basis: calc(100% / 3 - 10px);
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #current-weather > div:last-child, #forecast > div:last-child {
+    margin-right: 0;
+  }
+  
+  #city-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  #temperature, #humidity, #wind-speed {
+    margin-bottom: 5px;
+  }
+  
+  #search-history {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .search-item {
+    flex-basis: calc(100% / 4 - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .search-item:last-child {
+    margin-right: 0;
+  }
+  
+  .search-item:hover {
+    background-color: #f5f5f5;
+  }
+  
